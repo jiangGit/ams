@@ -1,0 +1,148 @@
+body,html, ul, ol {
+	padding: 0;
+	margin: 0;
+	font: 14px "Microsoft YaHei";
+}
+a {
+	text-decoration: none;
+	color: #3f7dd8;
+}
+ul, ol {
+	list-style: none;
+}
+
+/*main---------------------------------------------------------*/
+body {
+	background: #e5e5e5;
+}
+#container, #header {
+	width: 65%;
+	margin: 20px auto;
+	border-radius: 10px;
+	box-shadow: 0 1px 5px #999;
+	overflow: hidden;
+	background: #fff;
+}
+#header h1 {
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 0 20px;
+	border-right: 1px solid #ccc;
+	line-height: 40px;
+	font-size: 25px;
+	text-align: center;
+}
+#header .welcome {
+	float: right;
+	line-height: 40px;
+	padding: 0 20px;
+	margin: 0;
+}
+/*-------------------------------------left_bar*/
+#left_bar {
+	float: left;
+	width: 20%;
+	padding: 0 20px;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+	border-right: 1px solid #ccc;
+}
+#left_bar .nav li {
+	margin: 10px 0 10px;
+	text-align: center;
+	font-weight: bold;
+}
+#left_bar .nav li a {
+	color: #777;
+}
+#left_bar .nav li a:hover, #left_bar .nav li a.current {
+	color: #3f7dd8;
+}
+#right_bar {
+	width: 70%;
+	float: right;
+	padding-bottom: 30px;
+}
+#right_bar .topic {
+	border-bottom: 5px solid #ddd;
+}
+
+/*--------------------------------------notices*/
+
+#right_bar .notices {
+	padding-right: 50px;
+}
+#right_bar .notice {
+	border-bottom: 2px dashed #ddd;
+	margin-bottom: 20px;
+}
+#right_bar .info {
+    overflow: hidden;
+    padding-right: 10px;
+    
+}
+#right_bar .info .title {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+#right_bar .info .date {
+    float: right;
+    font-size: 13px;
+    color: #888;
+}
+/*------------------------------------------manage table*/
+#right_bar .manage_box {
+	padding-right: 50px;
+}
+.manage_box .function_box {
+	text-align: right;
+	margin: 20px 0;
+}
+.manage_box .function_box input {
+	margin: 0 0 0 10px;
+}
+.manage_box table {
+	width: 100%;
+	text-align: center;
+ 	border-collapse:collapse;
+}
+.manage_box table thead th {
+	border-bottom:1px solid #9dbceb;
+	padding: 5px 0;
+}
+.manage_box table tbody td{
+	padding: 8px 0;
+}
+.manage_box table tbody td input{
+	margin: 0 8px;
+}
+/*member manage*/
+.user_manage thead th {
+	width: 18%;
+}
+.user_manage thead th.function {
+	width: 40%;
+}
+/*goods manage*/
+.goods_manage thead th {
+	width: 25%;
+}
+.goods_manage thead th.function {
+	width: 50%;
+}
+/*member*/
+.member_manage thead th {
+	width: 15%;
+}
+.member_manage thead th.function {
+	width: 25%;
+}
+/*dept_manage*/
+.dept_manage thead th {
+	width: 20%;
+}
+.dept_manage thead th.function {
+	width: 80%;
+}

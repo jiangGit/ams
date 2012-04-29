@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="apply" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="144,28,48,48" name="start">
+      <transition to="申请"/>
+   </start>
+   <task assignee="#{owner}" form="/apply/apply" g="124,108,92,52" name="申请">
+      <transition to="exclusive1"/>
+   </task>
+   <task assignee="FUNCTIONARY" form="/audit/toAudit/" g="123,292,92,52" name="审核">
+      <transition to="exclusive2"/>
+   </task>
+   <end g="139,457,48,48" name="end"/>
+   <decision expr="#{type == '提交' ? '提交' : '取消'}" g="146,201,48,48" name="exclusive1">
+      <transition g="-45,-22" name="提交" to="审核"/>
+      <transition g="277,233;284,473:-43,-22" name="取消" to="end"/>
+   </decision>
+   <decision g="145,379,48,48" name="exclusive2" expr="#{type=='驳回' ? '驳回' : '结束'}">
+      <transition g="-43,-22" name="结束" to="end"/>
+      <transition g="51,386;47,140:-45,-22" name="驳回" to="申请"/>
+   </decision>
+</process>
